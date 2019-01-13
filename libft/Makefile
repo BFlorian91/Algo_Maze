@@ -6,7 +6,7 @@
 #    By: flbeaumo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 14:08:19 by flbeaumo          #+#    #+#              #
-#    Updated: 2019/01/11 13:03:07 by florian          ###   ########.fr        #
+#    Updated: 2019/01/13 17:06:39 by flbeaumo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -47,7 +47,7 @@ copy:
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
 	@ranlib $(NAME)
-	@echo "\\033[1;34m LIBFT\033[0m				\033[0;32m[SUCESS] \033[0m"
+	@echo "\\033[1;34m $(NAME)\033[0m				\033[0;32m[SUCESS] \033[0m"
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(CFLAGS)
@@ -55,10 +55,10 @@ $(NAME): $(OBJ)
 
 clean:
 	@rm -rf $(OBJ) $(SRCS) $(INC)
-	@echo "\033[1;31m Remove Object:\033[0m			\033[0;32m [OK] \033[0m"
+#	@echo "\033[1;31m Remove Object:\033[0m			\033[0;32m [OK] \033[0m"
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "\033[1;31m Remove Binary:\033[0m			\033[0;32m [OK] \033[0m"
+#	@echo "\033[1;31m Remove Binary:\033[0m			\033[0;32m [OK] \033[0m"
 
 re: fclean all

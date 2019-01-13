@@ -6,7 +6,7 @@
 /*   By: florian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 00:14:30 by florian           #+#    #+#             */
-/*   Updated: 2019/01/13 16:36:38 by flbeaumo         ###   ########.fr       */
+/*   Updated: 2019/01/13 17:07:12 by flbeaumo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct	s_mouse
 	int y;;
 }				t_mouse;
 
-int		find_path(int maze[5][5], int i, int j, int n);
-void	display(int maze[5][5]);
+int		find_path(int maze[10][10], int i, int j, int n);
+void	display(int maze[10][10]);
 
 #endif
