@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   backtrack.c                                        :+:      :+:    :+:   */
+/*   maze_solv_backtrack.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florian <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: flbeaumo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/13 12:50:37 by florian           #+#    #+#             */
-/*   Updated: 2019/01/13 13:55:35 by florian          ###   ########.fr       */
+/*   Created: 2019/01/13 15:58:52 by flbeaumo          #+#    #+#             */
+/*   Updated: 2019/01/13 16:33:20 by flbeaumo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "maze.h"
 #include <stdio.h>
@@ -23,6 +24,7 @@ void	display(int maze[5][5])
 	while (i < 5)
 	{
 		j = 0;
+		ft_putstr("\t\t  ");
 		while (j < 5)
 			ft_putnbr(maze[i][j++]);
 		ft_putchar('\n');
@@ -51,15 +53,3 @@ int		find_path(int maze[5][5], int i, int j, int n)
 }
 
 
-int		main(void)
-{
-	int		maze[5][5] =
-	{ 1, 0, 0, 1, 0,
-	  1, 1, 1, 1, 0,
-	  1, 1, 0, 0, 1,
-	  0, 1, 0, 1, 0,
-	  1, 1, 1, 1, 1 };
-	find_path(maze, 0, 0, 5);
-	display(maze);
-	return (0);
-}
